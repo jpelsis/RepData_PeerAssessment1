@@ -77,7 +77,8 @@ mean_activity[mean_activity[,2]==max(mean_activity[,2]),]
 ##     835.0     206.2
 ```
 It turns out that the interval recorded at 8:35 recorded the most steps on
-average. 
+average.
+  
 ## Imputing missing values
 To remove the missing data from the dataset, we will replace each NA in the
 steps column with the mean for that 5 minute interval.  

@@ -91,7 +91,11 @@ colnames(mean_activity) &lt;- c(&quot;Interval&quot;,&quot;Avg Steps&quot;)
 mean_activity[mean_activity[,2]==max(mean_activity[,2]),]</code></pre>
 <pre><code>##  Interval Avg Steps 
 ##     835.0     206.2</code></pre>
-<p>It turns out that the interval recorded at 8:35 recorded the most steps on average. ## Imputing missing values To remove the missing data from the dataset, we will replace each NA in the steps column with the mean for that 5 minute interval.</p>
+<p>It turns out that the interval recorded at 8:35 recorded the most steps on average.</p>
+</div>
+<div id="imputing-missing-values" class="section level2">
+<h2>Imputing missing values</h2>
+<p>To remove the missing data from the dataset, we will replace each NA in the steps column with the mean for that 5 minute interval.</p>
 <p>Our first step is to copy the data set. After copying the dataset, we step through each row. If the step count is NA in a specific day and interval, we insert the avg number of steps for that interval, otherwise we copy the recorded number of steps from the original dataset.</p>
 <pre class="r"><code>data2 &lt;- data
 for(i in 1:length(data$steps)){
